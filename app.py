@@ -198,10 +198,10 @@ def get_questions(id_ques: str):
 def serve_homepage():
     return FileResponse('static/index.html')
 
-
+port = int(os.environ.get("PORT", 8000))
 # Chạy ứng dụng FastAPI
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+    uvicorn.run(app, host='0.0.0.0', port=port)
     
 #uvicorn app:app --reload
