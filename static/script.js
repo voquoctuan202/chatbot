@@ -46,7 +46,7 @@ document.getElementById('upload-form').addEventListener('submit', async function
     formData.append('file', pngBlob, 'image.png');
     
     // Gửi yêu cầu POST đến API với tệp hình ảnh
-    const response = await fetch('http://localhost:8000/predict', {
+    const response = await fetch('/predict', {
         method: 'POST',
         body: formData
     });
@@ -225,7 +225,7 @@ getApiKey().then(apiKey => {
     const handleChat = () => {
         userMessage = chatInput.value.trim()
         if(!userMessage) return 
-        
+        new_userMessage = userMessage
         if(prediction){
             new_userMessage = `Chủ đề là ${prediction}: ` 
                             + userMessage
@@ -260,7 +260,7 @@ getApiKey().then(apiKey => {
         formData.append('file', pngBlob, 'image.png');
         
         // Gửi yêu cầu POST đến API với tệp hình ảnh
-        const response = await fetch('http://localhost:8000/predict', {
+        const response = await fetch('/predict', {
             method: 'POST',
             body: formData
         });
