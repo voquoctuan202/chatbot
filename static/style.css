@@ -229,12 +229,18 @@ label:active{
         border-radius: 0;
     }
     .chatbot .chatbox{
-        height: 90%;
+        height: 75%;
     }
+    .chatbot .chatbox li{
+        max-width: 800px;
+        
+    }
+    
     .chatbot header span{
         display: block;
         
     }
+    
     .chat-input span{
         margin-left: 0;
     }

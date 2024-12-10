@@ -205,8 +205,10 @@ getApiKey().then(apiKey => {
         const chatLi = document.createElement("li")
         chatLi.classList.add('chat', "incoming")
         
+        chatLi.style.display ="flex"
         chatLi.style.marginRight = "-25px"
-        let chatContent =  `<span style="margin-bottom:100px" class="material-symbols-outlined">smart_toy</span>`
+        chatLi.style.maxWidth = "800px"
+        let chatContent =  `<span style="margin-bottom:100px; "  class="material-symbols-outlined">smart_toy</span>`
         chatLi.innerHTML = chatContent
         imageUrls.forEach((url) => {
             const img = document.createElement('img');
@@ -215,6 +217,7 @@ getApiKey().then(apiKey => {
             img.style.width = "140px";
             
             img.style.margin = "2px";
+            
             chatLi.appendChild(img);
         });
         // let chatContent = ""
